@@ -1,17 +1,44 @@
-#Question num 3:
-
-''' MY LIBRARY '''
-
-bookType = input("Are you looking for a fiction (type F) or a non-fiction book (type NF)?")
-bookGenre = ''
-if bookType =="F":
-   bookGenre = int(input("What genre are you looking for: comedy (1), graphic novel (2), science fiction (3), fantasy (4), historial fiction (5)?"))
-if bookType =="NF":
-    bookGenre = int(input('What genre are you looking for: history (6), art (7), science (8), other(9)'))
-
-if bookGenre == "F":
-    print("You are looking for a comedy fiction book.")
-    print("You will find it in bookshelf A.")
-elif bookGenre == "NF":
-    print("You are looking for a comic/graphic novel.")
-    print("You will find it in bookshelf B.")
+# Task 3:
+# Your task is to write a computer program that asks the user if they are looking for a fiction or a non fiction book.Based on the user answer the program will ask the user to choose genre from a list a list available geres.Finally the program will return the location from a to i of books of this genre.
+fiction = {
+    "A" : "COMEDY",
+    "B" :  "COMIC/GRAPHIC NOVEL",
+    "C" : "SCIENCE FICTION",
+    "D" : "FANTASY",
+    "E" : "HISTORICAL FICTION"
+}
+non_fiction ={
+    "F" : "HISTORY & GEOGRAPHY",
+    "G" : "ARTS",
+    "H" : "SCIENCE & TECHNOLOGY",
+    "I" :  "OTHER"
+}
+print("SELECT ANY ONE OPTION!")
+print("ENTER 1 FOR 'FICTION'")
+print("ENTER 2 FOR 'NON FICTION'")
+c = int(input("Enter your choice here:"))
+if c == 1:
+    print("============FICTION=================")
+    print("Choose the genre from the below list!!")
+    print("'COMEDY'")
+    print("'COMIC/GRAPHIC NOVEL'")
+    print("'SCIENCE FICTION'")
+    print("'FANTASY'")
+    print("'HISTORICAL FICTION'")
+    genre = input("Enter your choice here:")
+    genre = genre.upper()
+    for i,j in fiction.items():
+        if genre == j:
+            print("the location of this book is,",i,"shelf")
+if c == 2:
+    print("==========NON FICTION================") 
+    print("Choose the genre from the below list!!")
+    print("'HISTORY & GEOGRAPHY")
+    print("'ARTS'")
+    print("'SCIENCE & TECHNOLOGY")
+    print("'HISTORY & GEOGRAPHY")
+    genre = input("Enter your choice here:")
+    genre = genre.upper()
+    for i,j in non_fiction.items():
+        if genre == j:
+            print("the location of this book is",i,"shelf")
